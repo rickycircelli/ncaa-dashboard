@@ -19,7 +19,7 @@ st.subheader("Enter Athlete TFRRS URL")
 url = st.text_input("Paste TFRRS Athlete Profile URL below:")
 
 
-# save atlhete data in cache to avoid re-scraping
+# Save atlhete data in cache to avoid re-scraping
 @st.cache_data(show_spinner=False)
 def get_athlete_data(url):
     df_scraped = scrape_tfrrs_results(url, wait_time=15)
@@ -48,12 +48,3 @@ if url:
         if st.button("📊 Show Placement Distribution Graph"):
             fig = plot_placement_distribution(df_cleaned)
             st.pyplot(fig)  
-
-# Optional: Hide Streamlit footer (for clean look)
-hide_streamlit_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
