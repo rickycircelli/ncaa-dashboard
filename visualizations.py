@@ -3,6 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 
+# Set Styles
 sns.set_style('whitegrid')
 sns.set_palette('muted')
 
