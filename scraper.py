@@ -5,8 +5,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
+# Scrapes TFRRS meet results from a given athlete profile URL
 def scrape_tfrrs_results(url, wait_time=15):
-    """Scrapes TFRRS meet results from a given athlete profile URL."""
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
 
